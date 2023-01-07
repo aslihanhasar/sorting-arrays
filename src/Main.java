@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main {
     static int[] receivingArr() {
@@ -26,13 +27,11 @@ public class Main {
                 }
             }
         }
-        System.out.print("Sorted array: ");
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
     }
 
     public static void main(String[] args) {
-        bubbleSort(receivingArr());
+        int[] arr = Main.receivingArr();
+        bubbleSort(arr);
+        System.out.println("Sorted Array: " + Arrays.toString(arr));
     }
 }
